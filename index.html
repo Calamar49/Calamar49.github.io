@@ -3,17 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Nombre - Desarrollador Web</title>
-    <!-- Enlazamos nuestra hoja de estilos CSS -->
+
+    <!-- SEO: Título optimizado -->
+    <title>Manuel | Desarrollador Web y Creador de Sitios Profesionales</title>
+    
+    <!-- SEO: Meta Descripción -->
+    <meta name="description" content="Portafolio de Manuel, estudiante de Ingeniería de Sistemas. Diseño y desarrollo sitios web funcionales y a medida para negocios y profesionales.">
+
+    <!-- ================= FAVICON ================= -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- =========================================== -->
+
+    <!-- Google Fonts para una tipografía profesional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Enlace a la hoja de estilos CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- ======== NAVEGACIÓN Y LOGO ======== -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="nav-logo">
+                <!-- Asegúrate de que el nombre del archivo de tu logo coincida -->
+                <img src="images/logo.png" alt="Logo de Manuel, Desarrollador Web">
+            </a>
+        </div>
+    </nav>
+
     <!-- ======== HEADER / ENCABEZADO ======== -->
     <header class="hero">
         <div class="hero-container">
-            <h1>Hola, soy [Tu Nombre]</h1>
-            <p>Creo sitios web modernos y funcionales para ayudarte a crecer.</p>
+            <h1>Hola, soy Manuel</h1>
+            <p>Estudiante de Ingeniería de Sistemas y desarrollador web. Transformo ideas en soluciones digitales atractivas y funcionales.</p>
         </div>
     </header>
 
@@ -22,9 +51,20 @@
         <section id="sobre-mi" class="section">
             <h2>Sobre Mí</h2>
             <p>
-                Soy un desarrollador web apasionado por la tecnología y el diseño. Me especializo en crear
-                experiencias de usuario atractivas y efectivas. Aquí te mostraré algunos de mis trabajos.
+                Soy un estudiante de Ingeniería de Sistemas apasionado por la tecnología y el desarrollo de software. Mi formación me proporciona una sólida base en lógica y resolución de problemas, la cual aplico para construir soluciones web eficientes y atractivas. Estoy en constante aprendizaje, explorando nuevas tecnologías para crear experiencias de usuario únicas.
             </p>
+        </section>
+
+        <!-- ======== SECCIÓN "MIS HABILIDADES" ======== -->
+        <section id="habilidades" class="section">
+            <h2>Mis Habilidades</h2>
+            <div class="habilidades-container">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Git y GitHub</span>
+                <span class="skill-tag">Diseño Responsivo</span>
+            </div>
         </section>
 
         <!-- ======== SECCIÓN "MIS PROYECTOS" ======== -->
@@ -32,24 +72,21 @@
             <h2>Mis Proyectos</h2>
             <div class="proyectos-container">
 
-                <!-- Proyecto 1 (Ejemplo) -->
                 <div class="proyecto-card">
-                    <!-- Puedes crear una imagen de 400x300px como vista previa -->
-                    <img src="https://via.placeholder.com/400x300" alt="Vista previa del Proyecto 1">
-                    <h3>Proyecto de Tienda Online</h3>
+                    <!-- SEO: Atributo alt descriptivo -->
+                    <img src="https://via.placeholder.com/400x300" alt="Concepto de e-commerce para Café de Altura">
+                    <h3>Café de Altura - E-commerce Concept</h3>
                     <p>Diseño de una tienda de e-commerce para una marca de café local. Enfocado en la conversión y la experiencia de compra.</p>
                     <a href="#" class="btn-proyecto">Ver Demo</a>
                 </div>
 
-                <!-- Proyecto 2 (Ejemplo) -->
                 <div class="proyecto-card">
-                    <img src="https://via.placeholder.com/400x300" alt="Vista previa del Proyecto 2">
-                    <h3>Web para Fotógrafo</h3>
-                    <p>Portafolio web minimalista para un fotógrafo profesional, centrado en mostrar su trabajo de forma elegante.</p>
+                    <!-- SEO: Atributo alt descriptivo -->
+                    <img src="https://via.placeholder.com/400x300" alt="Diseño de portafolio para fotógrafo profesional">
+                    <h3>Portafolio Fotográfico Minimalista</h3>
+                    <p>Portafolio web para un fotógrafo profesional, centrado en mostrar su trabajo de forma elegante y rápida.</p>
                     <a href="#" class="btn-proyecto">Ver Demo</a>
                 </div>
-
-                <!-- ¡Aquí añadirás más proyectos en el futuro! -->
 
             </div>
         </section>
@@ -57,14 +94,19 @@
         <!-- ======== SECCIÓN "CONTACTO" ======== -->
         <section id="contacto" class="section">
             <h2>Hablemos</h2>
-            <p>¿Tienes una idea o un proyecto en mente? ¡Contáctame!</p>
+            <p>¿Tienes una idea o un proyecto en mente? ¡Me encantaría ayudarte a hacerlo realidad!</p>
             <a href="mailto:tuemail@ejemplo.com" class="btn-contacto">Enviar un Email</a>
         </section>
     </main>
 
     <!-- ======== FOOTER / PIE DE PÁGINA ======== -->
     <footer>
-        <p>&copy; 2025 - Creado por [Tu Nombre]</p>
+        <div class="social-links">
+            <!-- Reemplaza '#' con los enlaces a tus perfiles reales -->
+            <a href="https://github.com/Calamar49" target="_blank">GitHub</a>
+            <a href="#" target="_blank">LinkedIn</a>
+        </div>
+        <p>&copy; 2025 - Creado por Manuel</p>
     </footer>
 
 </body>
