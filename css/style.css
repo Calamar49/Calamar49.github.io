@@ -1,10 +1,11 @@
-/* --- VARIABLES DE COLOR Y FUENTES (para fácil personalización) --- */
+/* --- VARIABLES DE COLOR Y FUENTES --- */
 :root {
-    --color-primario: #2c3e50; /* Azul oscuro/grisáceo para el fondo del hero */
-    --color-secundario: #3498db; /* Azul brillante para botones y acentos */
-    --color-fondo: #f4f7f6; /* Un gris muy claro para el fondo general */
-    --color-texto: #333333; /* Gris oscuro para el texto */
-    --color-blanco: #ffffff;
+    --color-primario: #2c3e50; /* Azul oscuro/grisáceo */
+    --color-secundario: #3498db; /* Azul brillante para acentos */
+    --color-fondo: #f8f9fa;     /* Un gris muy, muy claro para el fondo */
+    --color-fondo-alt: #ffffff;/* Blanco para secciones alternas */
+    --color-texto-principal: #212529; /* Negro suave para títulos */
+    --color-texto-secundario: #5c6770; /* Gris para párrafos */
 
     --fuente-titulos: 'Montserrat', sans-serif;
     --fuente-parrafos: 'Lato', sans-serif;
@@ -16,98 +17,129 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--color-fondo);
-    color: var(--color-texto);
-    line-height: 1.6; /* Mejora la legibilidad */
+    color: var(--color-texto-secundario);
+    line-height: 1.7; /* Aumenta el espacio entre líneas para legibilidad */
 }
 
 /* --- BARRA DE NAVEGACIÓN Y LOGO --- */
 .navbar {
-    background-color: var(--color-blanco);
-    padding: 15px 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky; /* Fija la barra en la parte superior al hacer scroll */
+    background-color: var(--color-fondo-alt);
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Sombra sutil para dar profundidad */
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .navbar-container {
-    max-width: 1100px; /* Ancho máximo para el contenido de la web */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .nav-logo img {
-    width: 150px; /* Tamaño visual del logo */
+    width: 180px; /* Hacemos el logo un poco más grande */
     height: auto;
-    display: block; /* Elimina espacio extra debajo de la imagen */
+    display: block;
 }
 
 /* --- ENCABEZADO / HERO SECTION --- */
 .hero {
     background-color: var(--color-primario);
-    color: var(--color-blanco);
+    color: var(--color-fondo-alt);
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
 }
 
 .hero h1 {
     font-family: var(--fuente-titulos);
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 3.5em; /* Título principal mucho más impactante */
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 600px; /* Evita que la línea de texto sea demasiado larga */
+    margin: 0 auto;
+    opacity: 0.9;
 }
 
 /* --- ESTILOS DE LAS SECCIONES --- */
 .section {
-    padding: 80px 20px;
+    padding: 100px 20px; /* Más espacio vertical para que respire */
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
 }
 
-.section h2 {
-    font-family: var(--fuente-titulos);
-    font-size: 2.5em;
-    margin-bottom: 40px;
+/* NUEVO: Estilo para secciones con fondo alterno */
+.section-alt {
+    background-color: var(--color-fondo-alt);
 }
 
-/* --- SECCIÓN DE HABILIDADES --- */
+.section h2 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-texto-principal);
+    font-size: 2.8em; /* Títulos de sección más grandes */
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 25px; /* Más espacio debajo del título */
+}
+
+.section p {
+    font-size: 1.1em;
+    max-width: 700px; /* Limita el ancho de los párrafos para fácil lectura */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- SECCIÓN DE HABILIDADES (DISEÑO MEJORADO) --- */
 .habilidades-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px; /* Más espacio entre etiquetas */
+    margin-top: 50px;
 }
 
 .skill-tag {
+    background-color: #eef1f4; /* Fondo sutil para las etiquetas */
+    color: var(--color-texto-secundario);
+    padding: 12px 25px;
+    border-radius: 30px; /* Píldoras más redondeadas */
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
     background-color: var(--color-secundario);
-    color: var(--color-blanco);
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 1em;
-    font-weight: bold;
+    color: var(--color-fondo-alt);
+    transform: translateY(-5px); /* Efecto de levantar al pasar el mouse */
 }
 
-/* --- CONTENEDOR DE PROYECTOS --- */
-.proyectos-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+/* --- (ESTILOS PARA PROYECTOS Y FOOTER - sin cambios mayores) --- */
+/* Los estilos anteriores para proyectos, botones y footer funcionan bien,
+   pero los incluyo aquí para que el archivo esté completo. */
+
+.proyectos-container, .contacto-container {
+    margin-top: 50px;
 }
 
-/* --- TARJETAS DE PROYECTO INDIVIDUALES --- */
 .proyecto-card {
-    background-color: var(--color-blanco);
+    background-color: var(--color-fondo-alt);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 300px;
-    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 320px;
+    padding: 25px;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .proyecto-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
 .proyecto-card img {
@@ -118,66 +150,55 @@ body {
 
 .proyecto-card h3 {
     font-family: var(--fuente-titulos);
+    color: var(--color-texto-principal);
     margin-top: 0;
 }
 
-/* --- BOTONES --- */
 .btn-proyecto, .btn-contacto {
     display: inline-block;
     margin-top: 15px;
-    padding: 12px 24px;
+    padding: 12px 28px;
     background-color: var(--color-secundario);
-    color: var(--color-blanco);
+    color: var(--color-fondo-alt);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn-proyecto:hover, .btn-contacto:hover {
-    background-color: #2980b9; /* Un azul un poco más oscuro */
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* --- PIE DE PÁGINA --- */
 footer {
-    background-color: var(--color-texto);
-    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    color: var(--color-fondo-alt);
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 20px;
 }
 
 .social-links a {
-    color: var(--color-blanco);
+    color: var(--color-fondo-alt);
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
-
 .social-links a:hover {
     color: var(--color-secundario);
 }
-
 footer p {
     margin-top: 20px;
     font-size: 0.9em;
+    opacity: 0.7;
 }
 
 /* --- DISEÑO RESPONSIVE (ADAPTABLE A MÓVILES) --- */
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 2.2em;
-    }
-
-    .section {
-        padding: 60px 20px;
-    }
-
-    .section h2 {
-        font-size: 2em;
-    }
-
-    .proyecto-card {
-        width: 100%; /* Las tarjetas ocupan todo el ancho en móviles */
-    }
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5em; }
+    .section h2 { font-size: 2.2em; }
+    .nav-logo img { width: 150px; }
+    .navbar { padding: 15px 20px; }
 }
